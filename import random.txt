@@ -1,0 +1,42 @@
+import random
+import time  # You need to import the time module for time.sleep()
+
+def print_slow(str):
+    for letter in str:
+        print(letter, end='', flush=True)
+        time.sleep(0.05)
+    print("\n")
+
+def start_game():
+    print_slow("Welcome to the Mysterious Forest Adventure!")
+    print_slow("You find yourself in a dense, dark forest.")
+    print_slow("You see three paths ahead. Which path will you choose?")
+    print("1. Left")
+    print("2. Middle")
+    print("3. Right")
+    choice = input("Enter your choice (1/2/3): ")
+
+    if choice == '1':
+        left_path()
+    elif choice == '2':
+        middle_path()
+    elif choice == '3':
+        right_path()
+    else:
+        print_slow("Invalid choice. Please try again.")
+        start_game()
+
+def left_path():
+    print_slow("You chose the left path.")
+    # Add more story and choices here
+
+def middle_path():
+    print_slow("You chose the middle path.")
+    # Add more story and choices here
+
+def right_path():
+    print_slow("You chose the right path.")
+    # Add more story and choices here
+
+# Main game loop
+start_game()
